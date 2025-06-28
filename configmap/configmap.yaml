@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-configmap
+data:
+  DB_Name: "MY-DB"
+  DB_Port: "5432"
