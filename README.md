@@ -1,2 +1,0 @@
-# kubernetes
-Practice yaml files
