@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hostpath-pod
+spec:
+  containers:
+  - name: nginx
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+    volumeMounts:
+    - name: hostpath-volume
+      mountPath: /host-path
+
+  volumes:
+  - name: hostpath-volume
+    hostPath:
+      path: /home/ubuntu/pod_data
+      type: DirectoryOrCreate
